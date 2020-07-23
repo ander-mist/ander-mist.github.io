@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //exercicio01
+      let titulo = document.createElement("h1");
+      titulo.innerHTML ="Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(titulo);
+      //------------------------------------------------
+      //exercicio02
+      let container = document.createElement("div");
+      container.className = "main-content";
+      document.body.appendChild(container);
+      //------------------------------------------------
+      //exercicio03
+      let container2 = document.createElement("div");
+      container2.className = "center-content";
+      document.querySelector(".main-content").appendChild(container2);
+      //-------------------------------------------------
+      //exercicio04
+      let textoDaDiv = document.createElement("p");
+      textoDaDiv.innerHTML = "Texto central do exercício 4 dentro da tag 'p'"
+      document.querySelector(".center-content").appendChild(textoDaDiv);
+      //-------------------------------------------------
+      //exercicio05
+      let containerLeft = document.createElement("div");
+      containerLeft.className ="left-content";
+      document.querySelector(".main-content").appendChild(containerLeft);
+      //-------------------------------------------------
+      //exercicio06
+      let containerRight = document.createElement("div");
+      containerRight.className = "right-content";
+      document.querySelector(".main-content").appendChild(containerRight);
+      //-------------------------------------------------
+      //exercicio07
+      let picture = document.createElement("img");
+      picture.src="https://picsum.photos/200";
+      picture.className = "small-image";
+      document.querySelector(".left-content").appendChild(picture);
+      //--------------------------------------------------
+      //exercicio08
+      let list = document.createElement("ul");
+      let list2;
+      let numbers = ["um","dois","tres","quatro","cinco","seis","sete","oito","nove","dez"];
+      
+      document.querySelector(".right-content").appendChild(list);
+
+      for(index = 0; index < numbers.length; index += 1){
+          list2 =  document.createElement("li");
+          document.querySelector(".right-content ul").appendChild(list2);
+          document.querySelectorAll(".right-content ul li")[index].innerHTML = numbers[index];
+          }
+      //----------------------------------------------------
+      //exercises09
+      for(index = 0; index < 3; index +=1){
+          let titulo3 = document.createElement("h3");
+          document.querySelector(".main-content").appendChild(titulo3);
+      }
+      //------------------------------------------------------
+      //2º parte de exercicios
+      //exercicio01
+      document.querySelector("body h1").className = "title";
+      //-------------------------------------------------------
+      //execicio02
+      let  tamanhoArray = document.querySelectorAll(".main-content h3");
+      for(i in tamanhoArray){
+        tamanhoArray[i].className = "description";
+        }
+      //------------------------------------------------------
+      //exercicio03
+      let retirar = document.querySelector(".left-content");
+      document.querySelector(".main-content").removeChild(retirar);  
+      //------------------------
+      //exercicio04
+      containerRight.style.marginRight = "auto";
+      //-------------------------------------------------------
+      //exercicio05
+      container2.style.backgroundColor = "green";
+      //-------------------------------------------------------
+      //exercicio06
+      let removeUltimoItem = list.lastChild;
+      let removePenultimoItem = list.lastChild.previousSibling;
+      document.querySelector(".right-content ul").removeChild(removeUltimoItem);
+      document.querySelector(".right-content ul").removeChild(removePenultimoItem);
+    
+    </script>
+  </body>
+</html>
