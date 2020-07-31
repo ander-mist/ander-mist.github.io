@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A gosto do cliente</title>
+</head>
+<body>
+	<style>
+		h1{
+			text-align: center;
+		}
+		body{
+			padding-top: 10%;
+			margin: auto;
+		}
+		.centralizar{
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+		#input-user{
+			width: 50%;
+		}
+		#box{
+			margin-top: 5%;
+			width: 50%;
+			border: 1px solid red;
+			height: 150px;
+		}
+		#box p{
+			text-overflow: ellipsis;
+		}
+		.button-list li{
+			display: inline-block;
+			padding: 6px;
+			}
+		.button-list{
+			width: 60%;
+		}
+		.color{
+			background-color: brown;
+		}
+	</style>
+	<h1>Sejam Bem-vindos</h1>
+	<section class="pensamento">
+		<input type="text" name="texto" id="input-user" class="centralizar" placeholder="Digite o seu pensamento aqui">
+	</section>
+	<section>
+		<ul class="button-list centralizar">
+			<li><input type="button" value="mudar cor de fundo" id="background"></li>
+			<li><input type="button" value="mudar cor do texto" id="background-text"></li>
+			<li><input type="button" value="mudar tamanho da fonte" id="tamanho-font"></li>
+			<li><input type="button" value="mudar espaço das linhas" id="line-gap"></li>
+			<li><input type="button" value="mudar o tipo da fonte" id="type-font"></li>
+		</ul>
+	</section>
+	<section class="user-thougth">
+		<div id="box" class="centralizar"></div>
+	</section>
+
+	<script>
+		let botaoFundo = document.getElementById("background");
+		botaoFundo.addEventListener('click', function(){
+			document.getElementById("box").style.backgroundColor = "blue";
+		});
+		botaoFundo.addEventListener('dblclick', function(){
+			document.getElementById("box").style.backgroundColor = "green";;
+		})
+		botaoFundo.addEventListener('mouseover', function(){
+			document.getElementById("box").style.backgroundColor = "white";
+		})	
+		let frase = document.getElementById("input-user");
+
+		frase.addEventListener('change', function(){
+			let txt = document.getElementById("input-user").value;
+			let para = document.createElement("p");
+			para.innerHTML = txt;
+			document.getElementById("box").appendChild(para);
+		});
+
+		let btnCorLetra = document.querySelector("#background-text");
+		btnCorLetra.addEventListener('click', function(){
+			document.getElementById("input-user").style.color = "purple";
+		});
+
+		btnCorLetra.addEventListener('click', function(){
+			document.getElementById("box").style.color = "purple";
+		})
+
+		let btnTamanhoFonte = document.querySelector("#tamanho-font");
+		btnTamanhoFonte.addEventListener('click', function(){
+			document.getElementById("box").style.fontSize = "larger"	
+		})
+
+		let btnEspacoEntreLinhas = document.querySelector("#line-gap");
+		btnEspacoEntreLinhas.addEventListener('click', function(){
+			document.getElementById("box").style.lineHeight = "25px"
+		}) 
+
+	</script>
+</body>
+</html>
