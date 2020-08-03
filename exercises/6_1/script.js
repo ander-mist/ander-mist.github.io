@@ -6,4 +6,37 @@ window.onload = function () {
     elemento.innerHTML = todosOsEstados[index];
     pais.appendChild(elemento);
   };
+
+  let data = document.querySelector('#data');
+  data.addEventListener('change', function () {
+    let valor = document.querySelector('#data').value;
+    console.log(valor);
+    valor = valor.split('/');
+    console.log(valor);
+    for (i = 0; i < valor.length; i++) {
+      if(i==0){
+        if (valor[0] < 0 || valor[0] > 31) {
+        alert('dia invalido');
+        }
+      }
+      if(i==1){
+        if(valor[1] < 0 || valor[1] > 12) {
+        console.log(valor[i]);
+        alert('o valor do mês deve ser maior que 0 e menor ou igual a 12');
+        }
+      }
+      if(i==2){
+        if(valor[2] < 1000 ){
+          alert('ano invalido');
+        }
+      }
+      
+     } 
+  });
+
+  function stopEvent(event){
+    event.preventDefault();
+  }
+  let pararBotao = document.querySelector('#enviar');
+  pararBotao.addEventListener('click', stopEvent, false);
 }
