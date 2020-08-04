@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="Pikaday/css/pikaday.css">
+    <title>Document</title>
+</head>
+<body>
+  <form action="" method="get"> 
+    <fieldset>
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome" id="nome" maxlength="40" required="required">
+      </div>
+      
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" maxlength="50" required="required">
+      </div>
+      
+      <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" maxlength="11" required="required" id="cpf">
+      </div>
+      
+      <div>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" maxlength="200" required="required">
+      </div>
+      
+      <div>
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade" maxlength="28" required="required">
+      </div>
+     
+      <div>
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado" required="required"></select>
+      </div>
+     
+      <fieldset required="required">
+        Tipo de moradia
+        <div>
+          <label for="moradia-a"></label>
+          <input type="radio" name="moradia" id="moradia-a">Casa
+        </div>
+          
+        <div>
+          <label for="moradia-c"></label>
+          <input type="radio" name="moradia" id="moradia-c">Apartamento
+        </div>
+      </fieldset>
+    </fieldset>
+
+    <fieldset>
+      <div>
+        <label for="curriculo">Resumo do Currículo</label>
+        <textarea required="required" name="curriculo" id="curriculo" maxlength="1000" cols="30" rows="10"></textarea>
+      </div>
+      
+      <div>
+        <label for="cargo">Cargo</label>
+        <input type="text" name="cargo" id="cargo" required="required" maxlength="40">
+      </div>
+      
+      <div>
+        <label for="descricao">Descrição do cargo</label>
+        <input type="text" name="decricao" id="descricao" maxlength="500" required="required">
+      </div>
+      
+      <div>
+        <label for="">Data de Inicio</label>
+        <input type="text" name="data" id="data" placeholder="DD/MM/AAAA" required="required"> 
+      </div>
+      
+      <div>
+        <button type="submit" id="enviar" >Enviar dados</button>
+      </div>
+    </fieldset>
+  </form>
+  <script src="Pikaday/pikaday.js"></script>
+  <script>
+    let picker = new Pikaday({ field: document.getElementById('data') });
+  </script>
+</body>
+</html>
