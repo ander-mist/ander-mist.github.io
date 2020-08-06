@@ -3,54 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
     <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
   <form action="" method="get">
-    <fieldset>
-      <label for="nome">Nome:</label>
-      <input type="text" name="nome" placeholder="Digite seu nome" id="nome" maxlength="40" required="required">
+      <div class="field">
+        <label class="label" for="nome">Nome:</label>
+        <div class="control">
+          <input class="input" type="text" name="nome" placeholder="Digite seu nome" id="nome" maxlength="40" required="required">
+        </div>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" maxlength="50" required="required">
-
-      <label for="cpf">CPF:</label>
-      <input type="text" name="cpf" maxlength="11" required="required" id="cpf">
-
-      <label for="endereco">Endereço:</label>
-      <input type="text" name="endereco" maxlength="200" required="required">
-
-      <label for="cidade">Cidade</label>
-      <input type="text" name="cidade" id="cidade" maxlength="28" required="required">
-
-      <label for="estado">Estado:</label>
-      <select name="estado" id="estado" required="required"></select>
-      <fieldset required="required">
-        Tipo de moradia
-          <label for="moradia-a"></label>
-          <input type="radio" name="moradia" id="moradia-a">Casa
-
-          <label for="moradia-c"></label>
-          <input type="radio" name="moradia" id="moradia-c">Apartamento
-      </fieldset>
+      <div class="field">
+        <label class="label" for="email">Email:</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="email" name="email" id="email" maxlength="50" required="required">
+        </div>
+      </div>
       
-    </fieldset>
+      <div class="field">
+        <label class ="label" for="cpf">CPF:</label>
+        <div class="control">
+          <input class="input" type="text" name="cpf" maxlength="11" required="required" id="cpf">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="endereco">Endereço:</label>
+        <div class="control">
+          <input class="input" type="text" name="endereco" maxlength="200" required="required">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="cidade">Cidade</label>
+        <div class="control">
+          <input  class="input" type="text" name="cidade" id="cidade" maxlength="28" required="required">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="estado">Estado:</label>
+        <div class="control">
+          <div class="select">
+            <select name="estado" id="estado" required="required"></select>
+          </div>
+        </div>
+      </div>
+      <label class="label" for="">Tipo de Moradia</label> 
+      <div class="field">
+        <div class="control">
+          <label class="radio" for="moradia-a">
+            <input type="radio" name="moradia" id="moradia-a">
+            Casa
+          </label>
+        
+          <label class="radio" for="moradia-c">
+            <input type="radio" name="moradia" id="moradia-c">
+            Apartamento
+          </label>
+        </div>
+      </div>
 
     <fieldset>
-      <label for="curriculo">Resumo do Currículo</label>
-      <textarea required="required" name="curriculo" id="curriculo" maxlength="1000" cols="30" rows="10"></textarea>
+      <div class="field">
+        <label class="label" for="curriculo">Resumo do Currículo</label>
+        <div class="control">
+          <textarea class="textarea" required="required" name="curriculo" id="curriculo" maxlength="1000" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label" for="cargo">Cargo</label>
+        <div class="control">
+          <input class="input" type="text" name="cargo" id="cargo" required="required" maxlength="40">
+        </div>
+      </div>
 
-      <label for="cargo">Cargo</label>
-      <input type="text" name="cargo" id="cargo" required="required" maxlength="40">
-
-      <label for="descricao">Descrição do cargo</label>
-      <input type="text" name="decricao" id="descricao" maxlength="500" required="required">
-
-      <label for="">Data de Inicio</label>
-      <input type="text" name="data" id="data" placeholder="DD/MM/AAAA" required="required"> 
-      <button type="submit" id="enviar" >Enviar dados</button>
+      <div class="field">
+        <label for="descricao">Descrição do cargo</label>
+        <div>
+          <input class="textarea" type="text" name="decricao" id="descricao" maxlength="500" required="required">
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label" for="">Data de Inicio</label>
+        <div class="control">
+          <input class="input" type="text" name="data" id="data" placeholder="DD/MM/AAAA" required="required"> 
+        </div>
+      </div>
     </fieldset>
+
+    <button  class="button is-success" type="submit" id="enviar" >Enviar dados</button>
+    <button  class="button is-danger" type="submit" id="limpar" >Limpar</button>
+    
+    <div class="field">
+      <label class="label" for=""></label>
+      <div class="control">
+        <input class="textarea" type="textarea" name="containerFinal" id="containerFinal">
+      </div>
+    </div>
   </form>
+  
 </body>
 </html>

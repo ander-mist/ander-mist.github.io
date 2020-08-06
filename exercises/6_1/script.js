@@ -29,14 +29,12 @@ window.onload = function () {
         if(valor[2] < 1000 ){
           alert('ano invalido');
         }
-      }
-      
+      }   
      } 
   });
+  document.querySelector('#enviar').addEventListener('click', stopEvent);
+}
 
-  function stopEvent(event){
-    event.preventDefault();
-  }
-  let pararBotao = document.querySelector('#enviar');
-  pararBotao.addEventListener('click', stopEvent, false);
+function stopEvent(event){
+  event.preventDefault();
 }
