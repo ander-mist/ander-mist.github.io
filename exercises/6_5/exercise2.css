@@ -3,4 +3,108 @@ html {
   }
   *, *:before, *:after {
     box-sizing: inherit;
-  }
+	}
+body {
+	font-size: 20px;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}	
+.container {
+	margin-top: 0px;
+}
+
+header {
+		background-color: darkslategray;
+		color: white;
+		margin-top: 0px;
+}
+
+header p {
+	font-size: x-large;	
+	text-align: center;
+}
+
+.navegate ul{
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+.navegate ul li {
+	width: 20%;
+	text-align: center;
+}
+
+.main-content {
+	color: darkslategray;
+}
+
+.main-content h1 {
+	font-size: 40px;
+	margin-top: 100px;
+}
+
+.aside-two , .aside-one{
+	color: darkslategray;
+	text-align: center;
+}
+
+.aside-two ul, .aside-one ul {
+	list-style-type: none;
+}
+
+footer {
+	color: white;
+	background-color: darkslategray;
+	font-size: small;
+	padding: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+	hr {
+		width: 400px;
+	}
+	header p {
+		font-size: 50px;	
+		text-align: center;
+	}
+	.navegate ul{
+		display: flex;
+		justify-content: flex-start;
+		list-style-type: none;
+	}
+
+	.navegate ul li {
+		width: 10%;
+		text-align: center;
+	}
+	.aside-container {
+		display: flex;
+		justify-content: center;
+		padding: 8%;
+	}
+	.aside-one, .aside-two {
+		border: 1px solid darkslategray;
+		width: 40%;
+		border-radius: 5px;
+		box-shadow: 1px 1px 5px 5px lightgray;
+		background-color:rgb(251, 252, 231);
+		text-decoration: underline;
+	}
+
+	.main-content {
+		max-width: 768px;
+		text-align: center;
+		margin: 0 auto;
+		background-color: rgb(243, 250, 243);
+		border-radius: 7px;
+		box-shadow: 1px 1px 5px 5px lightgray;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		background-image: url("img/aliceSite.jpg");
+	}
+}
