@@ -13,14 +13,16 @@ const getPlanet = () => {
 
   const messageDelay = () => Math.floor(Math.random() * 5000);
 
-const getMarsTemperature = (callback) => {
+const getMarsTemperature = () => {
   const maxTemperature = 58;
   return Math.floor(Math.random() * maxTemperature);
 };
 
+
 // crie a função sendMarsTemperature abaixo
-const sendMarsTemperature = function () {
-    setTimeout(() => console.log('Mars temperature is: 30 degree Celsius'),5000) 
+const sendMarsTemperature = function (callback) {
+    const marsTem = callback();
+    setTimeout(() => console.log(`Mars temperature is: ${marsTem} degree Celsius`),5000) 
 }
 
-sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
+sendMarsTemperature(getMarsTemperature); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
