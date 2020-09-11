@@ -1,0 +1,29 @@
+.cardAlign {
+	border: 1px solid gray;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+	padding: 5px;
+	text-align: center;
+	width: 320px;
+}
+
+.cardAlign ul  {
+	line-height: 25px;
+	list-style: none;
+}
+
+.container {
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	width: 900px;
+	border: 1px solid red;
+}
+
+.items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
