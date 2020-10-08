@@ -1,0 +1,11 @@
+body {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin:10px;
+}
